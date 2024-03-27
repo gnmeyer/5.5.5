@@ -1,13 +1,11 @@
-// main.go
+package go_unit_test_bootcamp
 
-package main
+func FindMissingDrone(droneIds []int) int {
+	missingDrone := 0
 
-import "fmt"
+	for _, id := range droneIds {
+		missingDrone ^= id
+	}
 
-func main() {
-    fmt.Println(Hello())
-}
-
-func Hello() string {
-    return "Hello, world!"
+	return missingDrone
 }
